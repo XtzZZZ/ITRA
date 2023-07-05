@@ -1,8 +1,9 @@
- 
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
-    var yyyy = today.getFullYear();
-
-    today = mm + '/' + dd + '/' + yyyy;
-    document.write(today);
+var d = new Date();
+var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat']
+var months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec']
+var week = days[d.getDay()];
+var day = d.getDate();
+var month = d.getMonth();
+var year = d.getFullYear()
+var date = week+' '+day+' '+months[month]+' '+year; 
+document.getElementById("current-date").innerHTML = date
