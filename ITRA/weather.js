@@ -1,5 +1,5 @@
 function weather() {
-  var title = 'Weather';
+  var title = 'Room Temperature';
   document.getElementById("weather-info").innerHTML = title;
 }
 weather();

@@ -2,8 +2,7 @@ var week = 'A';
 
 var d = new Date();
 var days = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-var day = d.getDay();
-var day = days[day];
+var day = days[d.getDay()];
 
 if (week=='A') {
   switch (day) {

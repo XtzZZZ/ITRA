@@ -53,7 +53,7 @@
   text-align: center;
 }
 
-.news {
+.toDo {
   position: fixed;
   bottom: 25px;
   right: 25px;
@@ -63,6 +63,7 @@
   background-color: #D9D9D9;
   border: 5px solid #aaaaaa;
   border-radius: 5px;
+  font-size: 45px;
 }
 
 .periodI {
@@ -144,5 +145,18 @@
 }
 .pVt {
   font-size:20px;
+  text-align: center;
+}
+
+.roomTemp {
+  position: fixed;
+  top: 100px;
+  right: 40px;
+  height: 250px;
+  width: 780px;
+  background-color: #e392fe;
+  border-radius: 5px;
+  font-size: 35px;
+  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }

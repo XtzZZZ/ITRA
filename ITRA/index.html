@@ -8,16 +8,16 @@
 </head>
 
 <body>
-  <div class="Clock">
+  <div class="Clock";>
     <head>
     <meta charset = "utf-8">
     <title> Digital Clock Using JavaScript </title>
     <link rel = "stylesheet" href = "styles.css">
     </head>
-    <div id = "digital-clock"> </div>
+    <div id = "digital-clock" style="background-color: #ed719e; width: 550px; border-radius: 5px; margin: auto;"> </div>
     <script src = "time.js"> </script>
     <body>
-     <div class="Date">
+     <div class="Date" style="background-color: #74a7fe; width: 400px; border-radius: 5px; margin: auto;">
       <div id="current-date"></div>
       <script src = "date.js"></script>
      </div>
@@ -79,9 +79,55 @@
     <script src="weather.js"></script>
   </div>
   
-  <div class="news">
-    
+  <div class="toDo">
+    <table id="goals" style="width: 772px; text-align: center; margin: auto; padding: 15px 0;">
+      <tr style="height:130px; background-color: lightblue; border: 2px; border-radius: 10px;">
+        <td>Goal #1</td>
+      </tr>
+      <tr style="height:130px; background-color: lightgreen; border: 2px; border-radius: 10px;">
+        <td>Goal #2</td>
+      </tr>
+      <tr style="height:130px; background-color: lightpink; border: 2px; border-radius: 10px;">
+        <td>Goal #3</td>
+      </tr>
+    </table>
+    <script>
+      var table = document.getElementById('goals');
+      var cells = table.getElementsByTagName('td');
+      for (var i = 0; i < cells.length; i++){
+        cells[i].onclick = function() {
+          if (this.hasAttribute('data-clicked')) {
+            return;
+          }
+          this.setAttribute('data-clicked', 'yes');
+          this.setAttribute('data-text', this.innerHTML);
+          
+          var input = document.createElement('input');
+          input.setAttribute('type', 'text');
+          input.value = this.innerHTML;
+          input.style.width = this.offsetWidth - (this.clientLeft*2) + "px";
+          input.style.height = this.offsetHeight - (this.clientTop*2) + "px";
+          input.style.border = "0px";
+          input.style.fontFamily = "inherit";
+          input.style.fontSize = "inherit";
+          input.style.textAlign = "inherit";
+          input.style.backgroundColor = "inherit";
+
+          this.innerHTML = '';
+          this.style.cssText = 'padding: 0px 0px';
+          this.append(input);
+          this.firstElementChild.select();
+        }
+      }
+                                       
+    </script>
   </div>
-    
+
+  <div class="roomTemp">
+    <script>
+      
+    </script>
+  </div>
+
 </body>  
 </html>
